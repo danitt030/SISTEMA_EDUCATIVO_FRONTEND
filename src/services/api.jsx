@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://sistema-educativo-backend.vercel.app/sistemaEducativo/v1",
+    baseURL: "https://sistema-educativo-backend.vercel.app/sistemaEducativo/v1",
     timeout: 5000,
     httpsAgent: false
 });
