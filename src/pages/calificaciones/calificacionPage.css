@@ -1,0 +1,983 @@
+/* ==================== CALIFICACION PAGE ==================== */
+.calificacion-page {
+    min-height: calc(100vh - 96px);
+    padding: 8px 0;
+}
+
+.calificacion-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==================== BADGES DE NOTAS ==================== */
+.nota-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.nota-aprobado,
+.nota-aprobada {
+    background: rgba(6, 214, 160, 0.15);
+    color: var(--success-color);
+}
+
+.nota-reprobado,
+.nota-reprobada {
+    background: rgba(239, 71, 111, 0.15);
+    color: var(--danger-color);
+}
+
+.badge-nota {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    min-width: 45px;
+}
+
+.badge-nota.badge-success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+}
+
+.badge-nota.badge-warning {
+    background: rgba(234, 179, 8, 0.15);
+    color: #ca8a04;
+}
+
+.badge-nota.badge-danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+.nota-zona,
+.nota-examen {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ==================== CUADRO DE NOTAS ==================== */
+.cuadro-notas {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.cuadro-notas th,
+.cuadro-notas td {
+    text-align: center;
+}
+
+/* ==================== SECCIÓN DE BOLETAS (ADMIN) ==================== */
+.boleta-section {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.boleta-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.boleta-section h3 svg {
+    color: var(--primary-color);
+}
+
+/* ==================== FILTROS DE BOLETA ==================== */
+.boleta-filters {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.filter-select {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    min-width: 150px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+/* ==================== CONTENEDOR DE BOLETA ==================== */
+.boleta-container {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.boleta-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+}
+
+.estudiante-info h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.25rem;
+}
+
+.estudiante-info p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.curso-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+/* ==================== TABLA DE BOLETA ==================== */
+.boleta-table-container {
+    overflow-x: auto;
+}
+
+.boleta-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.boleta-table thead {
+    background: var(--bg-tertiary);
+}
+
+.boleta-table th {
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.boleta-table td {
+    padding: 0.85rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.boleta-table .materia-cell {
+    text-align: left;
+    font-weight: 500;
+}
+
+.boleta-table .promedio-cell {
+    font-weight: 700;
+}
+
+.boleta-table tr:hover {
+    background: var(--bg-secondary);
+}
+
+/* Estados de notas en boleta */
+.boleta-table td.nota-aprobada {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.boleta-table td.nota-reprobada {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.estado-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.estado-badge.aprobado {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+}
+
+.estado-badge.reprobado {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+/* ==================== RESUMEN DE BOLETA ==================== */
+.boleta-resumen {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-tertiary);
+    border-top: 1px solid var(--border-color);
+}
+
+.boleta-resumen .resumen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.boleta-resumen .resumen-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.boleta-resumen .resumen-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.boleta-resumen .resumen-value.aprobado {
+    color: #16a34a;
+}
+
+.boleta-resumen .resumen-value.reprobado {
+    color: #dc2626;
+}
+
+/* ==================== ESTADO VACÍO ==================== */
+.empty-boleta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.empty-boleta svg {
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.empty-boleta h3 {
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.empty-boleta p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ==================== BOTÓN DE BOLETA ==================== */
+.boleta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--danger-color), #d63384);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.boleta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==================== ACCIONES DEL HEADER ==================== */
+.header-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .boleta-filters {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .filter-group {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .filter-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .filter-actions button {
+        width: 100%;
+    }
+
+    .boleta-header-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .boleta-resumen {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .header-actions button {
+        width: 100%;
+    }
+
+    .boleta-section {
+        padding: 1rem;
+    }
+}
+
+/* ==================== CARDS DE ESTUDIANTES (NUEVA VISTA) ==================== */
+.estudiantes-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.estudiante-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.estudiante-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.estudiante-card.expanded {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.estudiante-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.estudiante-card-header:hover {
+    background: var(--bg-secondary);
+}
+
+.estudiante-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.estudiante-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.estudiante-nombre {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.estudiante-meta {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.estudiante-promedio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.promedio-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.promedio-badge.badge-success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+}
+
+.promedio-badge.badge-warning {
+    background: rgba(234, 179, 8, 0.15);
+    color: #ca8a04;
+}
+
+.promedio-badge.badge-danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+.promedio-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.expand-icon {
+    color: var(--text-secondary);
+    transition: transform 0.3s;
+}
+
+.estudiante-card.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* ==================== CONTENIDO EXPANDIDO ==================== */
+.estudiante-card-content {
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.estudiante-actions-bar {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* ==================== GRID DE MATERIAS ==================== */
+.materias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.25rem;
+}
+
+.materia-card {
+    background: var(--bg-primary);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 2px solid #1e3a5f;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.materia-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(30, 58, 95, 0.15);
+    border-color: #3b82f6;
+}
+
+.materia-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.materia-card-header svg {
+    color: #1e3a5f;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.materia-nombre {
+    flex: 1;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+}
+
+.curso-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+/* ==================== BIMESTRES ==================== */
+.bimestres-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.bimestre-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.bimestre-item:hover {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.bimestre-item.sin-nota {
+    opacity: 0.5;
+}
+
+.bimestre-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.notas-detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.notas-detalle .nota-zona,
+.notas-detalle .nota-examen {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.nota-total {
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.nota-total.badge-success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+}
+
+.nota-total.badge-warning {
+    background: rgba(234, 179, 8, 0.15);
+    color: #ca8a04;
+}
+
+.nota-total.badge-danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+.sin-calificacion {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    padding: 0.5rem;
+}
+
+/* ==================== ACCIONES DE BIMESTRE ==================== */
+.bimestre-actions {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.action-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.action-btn.view {
+    color: var(--info-color);
+}
+
+.action-btn.view:hover {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.action-btn.edit {
+    color: var(--warning-color);
+}
+
+.action-btn.edit:hover {
+    background: rgba(234, 179, 8, 0.15);
+}
+
+.action-btn.delete {
+    color: var(--danger-color);
+}
+
+.action-btn.delete:hover {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+/* ==================== ESTADO VACÍO GENERAL ==================== */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+}
+
+.empty-state svg {
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ==================== RESPONSIVE CARDS ==================== */
+@media (max-width: 768px) {
+    .estudiante-card-header {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .estudiante-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .estudiante-promedio {
+        order: 3;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px dashed var(--border-color);
+    }
+
+    .promedio-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+    }
+
+    .expand-icon {
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+    }
+
+    .estudiante-card-header {
+        position: relative;
+    }
+
+    .materias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bimestres-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .estudiante-actions-bar {
+        flex-direction: column;
+    }
+
+    .estudiante-actions-bar button {
+        width: 100%;
+    }
+}
+
+/* ==================== SECCIÓN MATERIAS DEL PROFESOR ==================== */
+.profesor-materias-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #4f46e5 100%);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.profesor-materias-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.profesor-materias-section h3 svg {
+    opacity: 0.9;
+}
+
+.materias-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.materia-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.materia-chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.materia-chip svg {
+    opacity: 0.9;
+}
+
+.materia-chip-nombre {
+    font-weight: 600;
+}
+
+.materia-chip-curso {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+}
+
+/* Dark mode para materias del profesor */
+[data-theme="dark"] .profesor-materias-section {
+    background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+}
+
+/* Dark mode para tarjetas de materias */
+[data-theme="dark"] .materia-card {
+    background: #1e293b;
+    border-color: #3b82f6;
+}
+
+[data-theme="dark"] .materia-card:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .materia-card-header {
+    border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .materia-card-header svg {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .materia-nombre {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .bimestre-item {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .bimestre-item:hover {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="dark"] .bimestre-label {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .notas-detalle .nota-zona,
+[data-theme="dark"] .notas-detalle .nota-examen {
+    color: #94a3b8;
+}
+
+@media (max-width: 991px) {
+    .boleta-filters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .materias-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .materias-chips {
+        flex-direction: column;
+    }
+    
+    .materia-chip {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .calificacion-content {
+        padding: 0;
+    }
+    
+    .boleta-header-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .materias-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .materia-card {
+        padding: 1.25rem;
+    }
+    
+    .bimestres-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .calificacion-page {
+        padding: 4px 0;
+    }
+    
+    .boleta-section {
+        padding: 1rem;
+    }
+    
+    .bimestres-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    
+    .bimestre-item {
+        padding: 0.75rem;
+    }
+    
+    .nota-valor {
+        font-size: 1.25rem;
+    }
+    
+    .boleta-table th,
+    .boleta-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,107 @@
+/* ==================== CURSO PAGE ==================== */
+.curso-page {
+    min-height: calc(100vh - 96px);
+    padding: 8px 0;
+}
+
+.curso-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.curso-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.curso-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.curso-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.curso-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Badges de nivel del backend */
+.badge-nivel {
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.badge-preprimaria {
+    background: rgba(255, 193, 7, 0.15);
+    color: #d68a00;
+}
+
+.badge-primaria {
+    background: rgba(6, 214, 160, 0.15);
+    color: var(--success-color);
+}
+
+.badge-basico {
+    background: rgba(67, 97, 238, 0.15);
+    color: var(--primary-color);
+}
+
+/* Legacy badges */
+.nivel-primaria {
+    background: rgba(6, 214, 160, 0.15);
+    color: var(--success-color);
+}
+
+.nivel-secundaria {
+    background: rgba(67, 97, 238, 0.15);
+    color: var(--primary-color);
+}
+
+.nivel-diversificado {
+    background: rgba(114, 9, 183, 0.15);
+    color: var(--secondary-color);
+}
+
+/* Responsive handled by Layout.css */
+
+@media (max-width: 768px) {
+    .curso-content {
+        padding: 0;
+    }
+    
+    .curso-card {
+        padding: 16px;
+    }
+    
+    .curso-card-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .curso-page {
+        padding: 4px 0;
+    }
+    
+    .curso-card {
+        padding: 14px;
+        margin-bottom: 12px;
+    }
+}

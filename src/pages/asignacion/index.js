@@ -1,0 +1,1 @@
+export { default as AsignacionPage } from './AsignacionPage.jsx';

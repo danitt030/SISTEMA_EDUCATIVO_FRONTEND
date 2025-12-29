@@ -1,0 +1,88 @@
+.card-custom {
+    background: var(--bg-primary, white);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    border: 1px solid var(--border-color, #e2e8f0);
+    transition: all 0.3s ease;
+}
+
+.card-custom:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    background: var(--bg-secondary, #f8fafc);
+}
+
+.card-custom-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary, #1e293b);
+    letter-spacing: -0.01em;
+}
+
+.card-custom-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-custom-body {
+    padding: 1.5rem;
+}
+
+/* ==================== DARK MODE ==================== */
+[data-theme="dark"] .card-custom {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .card-custom-header {
+    background: #0f172a;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .card-custom-title {
+    color: #f1f5f9;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .card-custom-header {
+        padding: 1rem 1.25rem;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    
+    .card-custom-title {
+        font-size: 1.05rem;
+    }
+    
+    .card-custom-body {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-custom {
+        border-radius: 12px;
+    }
+    
+    .card-custom-header {
+        padding: 0.875rem 1rem;
+    }
+    
+    .card-custom-title {
+        font-size: 1rem;
+    }
+    
+    .card-custom-body {
+        padding: 1rem;
+    }
+}

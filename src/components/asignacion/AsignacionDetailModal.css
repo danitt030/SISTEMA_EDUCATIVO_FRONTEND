@@ -1,0 +1,205 @@
+/* ==================== ASIGNACION DETAIL ==================== */
+.asignacion-detail {
+    padding: 0.75rem 0;
+}
+
+/* ==================== HEADER ==================== */
+.asignacion-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    margin-bottom: 1.5rem;
+}
+
+.asignacion-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(30, 58, 95, 0.25);
+}
+
+.asignacion-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.asignacion-main-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: var(--text-primary, #1e293b);
+    font-weight: 600;
+}
+
+.asignacion-main-info .badges-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ==================== STATUS BADGES ==================== */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    width: fit-content;
+}
+
+.status-badge.active {
+    background: rgba(22, 163, 74, 0.12);
+    color: #16a34a;
+}
+
+.status-badge.inactive {
+    background: rgba(220, 38, 38, 0.12);
+    color: #dc2626;
+}
+
+.status-badge.becado {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* ==================== DETAIL BODY ==================== */
+.asignacion-detail-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detail-section {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.detail-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.section-title {
+    margin: 0 0 1rem 0;
+    font-size: 0.85rem;
+    color: #1e3a5f;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-tertiary, #f8fafc);
+    border-radius: 12px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    transition: background 0.2s ease;
+}
+
+.detail-icon {
+    color: #1e3a5f;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary, #64748b);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--text-primary, #1e293b);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* ==================== DARK THEME ==================== */
+[data-theme="dark"] .asignacion-icon {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .asignacion-main-info h3 {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .detail-section {
+    border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .section-title {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .detail-item {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .detail-icon {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .detail-label {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .detail-value {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .status-badge.active {
+    background: rgba(22, 163, 74, 0.2);
+}
+
+[data-theme="dark"] .status-badge.inactive {
+    background: rgba(220, 38, 38, 0.2);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 576px) {
+    .asignacion-detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .asignacion-main-info .badges-container {
+        justify-content: center;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

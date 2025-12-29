@@ -1,0 +1,1 @@
+export { default as CursoPage } from './CursoPage.jsx';

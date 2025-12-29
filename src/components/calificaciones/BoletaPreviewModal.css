@@ -1,0 +1,753 @@
+/* ==================== BOLETA PREVIEW MODAL - DISEÑO PROFESIONAL ==================== */
+.boleta-preview-container {
+    padding: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #ffffff;
+}
+
+/* ==================== ENCABEZADO INSTITUCIONAL ==================== */
+.boleta-header-institucional {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1e3a5f 100%);
+    color: white;
+    border-bottom: 4px solid #c9a227;
+    margin-bottom: 0;
+}
+
+.institucion-logo {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.institucion-logo svg {
+    color: #1e3a5f;
+    width: 45px;
+    height: 45px;
+}
+
+.institucion-info {
+    flex: 1;
+    text-align: center;
+}
+
+.institucion-nombre {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.boleta-titulo {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #c9a227;
+    text-transform: uppercase;
+}
+
+.ciclo-escolar-label {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.boleta-badge-ciclo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.boleta-badge-ciclo span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* ==================== INFORMACIÓN DEL ESTUDIANTE ==================== */
+.boleta-info-estudiante {
+    padding: 1.25rem 2rem;
+    background: linear-gradient(to right, #f8fafc, #f1f5f9);
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.info-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    min-width: 110px;
+}
+
+.info-label svg {
+    color: #1e3a5f;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.info-value.nombre-estudiante {
+    font-size: 1.1rem;
+    color: #1e3a5f;
+    text-transform: uppercase;
+}
+
+/* ==================== TABLA DE CALIFICACIONES ==================== */
+.boleta-tabla-container {
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+}
+
+.boleta-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    border: 2px solid #1e3a5f;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.boleta-tabla thead {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+}
+
+.boleta-tabla th {
+    padding: 0.85rem 0.75rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.boleta-tabla th:last-child {
+    border-right: none;
+}
+
+.th-materia {
+    text-align: left !important;
+    min-width: 180px;
+}
+
+.th-bimestre {
+    width: 90px;
+}
+
+.th-promedio {
+    width: 100px;
+    background: rgba(201, 162, 39, 0.3) !important;
+}
+
+.th-estado {
+    width: 120px;
+}
+
+.boleta-tabla tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.2s;
+}
+
+.boleta-tabla tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.boleta-tabla tbody tr:hover {
+    background: #e8f4fd;
+}
+
+.fila-reprobada {
+    background: #fef2f2 !important;
+}
+
+.fila-reprobada:hover {
+    background: #fee2e2 !important;
+}
+
+.boleta-tabla td {
+    padding: 0.6rem 0.75rem;
+    text-align: center;
+    border-right: 1px solid #e2e8f0;
+    vertical-align: middle;
+}
+
+.boleta-tabla td:last-child {
+    border-right: none;
+}
+
+.td-materia {
+    text-align: left !important;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.td-bimestre {
+    padding: 0.4rem !important;
+}
+
+/* ==================== NOTAS EN CELDAS ==================== */
+.nota-celda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.35rem;
+    border-radius: 6px;
+}
+
+.nota-celda.excelente {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.nota-celda.aprobado {
+    background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+}
+
+.nota-celda.reprobado {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.nota-total {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.nota-celda.excelente .nota-total {
+    color: #15803d;
+}
+
+.nota-celda.aprobado .nota-total {
+    color: #a16207;
+}
+
+.nota-celda.reprobado .nota-total {
+    color: #dc2626;
+}
+
+.nota-detalle {
+    font-size: 0.65rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.sin-nota {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+/* ==================== PROMEDIO EN TABLA ==================== */
+.td-promedio {
+    background: #fffbeb !important;
+}
+
+.promedio-valor {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.promedio-valor.excelente {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.promedio-valor.aprobado {
+    background: #fef9c3;
+    color: #a16207;
+}
+
+.promedio-valor.reprobado {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* ==================== ESTADO EN TABLA ==================== */
+.estado-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.estado-badge.aprobado {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.estado-badge.reprobado {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* ==================== RESUMEN FINAL ==================== */
+.boleta-resumen {
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+    border-top: 2px solid #0284c7;
+}
+
+.resumen-cards {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.resumen-card.promedio-general {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #1e3a5f;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.15);
+    min-width: 220px;
+}
+
+.resumen-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.resumen-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumen-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.resumen-valor {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.resumen-valor.excelente {
+    color: #15803d;
+}
+
+.resumen-valor.aprobado {
+    color: #a16207;
+}
+
+.resumen-valor.reprobado {
+    color: #dc2626;
+}
+
+.resumen-status {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.resumen-status.excelente {
+    color: #15803d;
+}
+
+.resumen-status.aprobado {
+    color: #a16207;
+}
+
+.resumen-status.reprobado {
+    color: #dc2626;
+}
+
+.resumen-stats {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid;
+    min-width: 130px;
+}
+
+.stat-item.aprobadas {
+    border-color: #86efac;
+    color: #15803d;
+}
+
+.stat-item.reprobadas {
+    border-color: #fca5a5;
+    color: #dc2626;
+}
+
+.stat-item.total {
+    border-color: #93c5fd;
+    color: #1d4ed8;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-numero {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    opacity: 0.85;
+}
+
+/* ==================== NOTA AL PIE ==================== */
+.boleta-nota-pie {
+    padding: 0.75rem 1.5rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.boleta-nota-pie p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.boleta-nota-pie strong {
+    color: #1e3a5f;
+}
+
+/* ==================== ACCIONES DEL MODAL ==================== */
+.boleta-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-top: 2px solid #e2e8f0;
+}
+
+/* ==================== ESTADO VACÍO ==================== */
+.boleta-preview {
+    padding: 0.5rem;
+}
+
+.empty-boleta-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.empty-boleta-modal svg {
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+}
+
+.empty-boleta-modal h3 {
+    margin: 0 0 0.5rem;
+    color: #475569;
+    font-size: 1.2rem;
+}
+
+.empty-boleta-modal p {
+    margin: 0 0 1.5rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+    .resumen-cards {
+        flex-direction: column;
+    }
+    
+    .resumen-card.promedio-general {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .resumen-stats {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .boleta-header-institucional {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+    
+    .institucion-nombre {
+        font-size: 1.3rem;
+    }
+    
+    .boleta-badge-ciclo {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .boleta-tabla-container {
+        padding: 1rem;
+    }
+    
+    .boleta-tabla {
+        font-size: 0.8rem;
+    }
+    
+    .th-materia {
+        min-width: 120px;
+    }
+    
+    .th-bimestre {
+        width: 65px;
+    }
+    
+    .nota-total {
+        font-size: 0.95rem;
+    }
+    
+    .nota-detalle {
+        display: none;
+    }
+    
+    .resumen-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 1;
+        min-width: calc(50% - 0.5rem);
+        justify-content: center;
+    }
+    
+    .boleta-modal-actions {
+        flex-direction: column;
+    }
+    
+    .boleta-modal-actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .boleta-header-institucional {
+        padding: 1rem;
+    }
+    
+    .institucion-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .institucion-logo svg {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .institucion-nombre {
+        font-size: 1.1rem;
+    }
+    
+    .boleta-titulo {
+        font-size: 0.9rem;
+    }
+    
+    .th-estado {
+        display: none;
+    }
+    
+    .td-estado {
+        display: none;
+    }
+}
+
+/* ==================== SCROLLBAR PERSONALIZADA ==================== */
+.boleta-preview-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.boleta-preview-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.boleta-preview-container::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+}
+
+.boleta-preview-container::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* ==================== TEMA OSCURO ==================== */
+[data-theme="dark"] .boleta-preview-container {
+    background: #1e293b;
+}
+
+[data-theme="dark"] .boleta-header-institucional {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+}
+
+[data-theme="dark"] .boleta-info-estudiante {
+    background: linear-gradient(to right, #1e293b, #334155);
+    border-bottom-color: #475569;
+}
+
+[data-theme="dark"] .info-label {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .info-label svg {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .info-value {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .info-value.nombre-estudiante {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .boleta-tabla-container {
+    background: #1e293b;
+}
+
+[data-theme="dark"] .boleta-tabla {
+    border-color: #475569;
+}
+
+[data-theme="dark"] .boleta-tabla tbody tr {
+    border-bottom-color: #475569;
+}
+
+[data-theme="dark"] .boleta-tabla tbody tr:nth-child(even) {
+    background: #334155;
+}
+
+[data-theme="dark"] .boleta-tabla tbody tr:hover {
+    background: #3b4e6a;
+}
+
+[data-theme="dark"] .boleta-tabla td {
+    border-right-color: #475569;
+}
+
+[data-theme="dark"] .td-materia {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .td-promedio {
+    background: rgba(255, 251, 235, 0.1) !important;
+}
+
+[data-theme="dark"] .boleta-resumen {
+    background: linear-gradient(to right, #1e3a5f, #1e293b);
+    border-top-color: #475569;
+}
+
+[data-theme="dark"] .resumen-card.promedio-general {
+    background: #334155;
+    border-color: #60a5fa;
+}
+
+[data-theme="dark"] .resumen-label {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .stat-item {
+    background: #334155;
+}
+
+[data-theme="dark"] .boleta-nota-pie {
+    background: #334155;
+    border-top-color: #475569;
+}
+
+[data-theme="dark"] .boleta-nota-pie p {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .boleta-nota-pie strong {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .boleta-modal-actions {
+    background: #1e293b;
+    border-top-color: #475569;
+}

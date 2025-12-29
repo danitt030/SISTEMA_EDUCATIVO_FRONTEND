@@ -1,0 +1,112 @@
+/* ==================== ASIGNACION FORM ==================== */
+.asignacion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* ==================== FORM ROW ==================== */
+.form-row {
+    margin-bottom: 0.5rem;
+}
+
+.form-row.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: end;
+}
+
+/* ==================== FORM ACTIONS ==================== */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color, #e2e8f0);
+}
+
+.form-actions .btn {
+    min-width: 140px;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ==================== CHECKBOX CONTAINER ==================== */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    background: var(--bg-secondary, #f1f5f9);
+    border-radius: 12px;
+    height: fit-content;
+    border: 2px solid var(--border-color, #e2e8f0);
+    transition: all 0.25s ease;
+}
+
+.checkbox-container:hover {
+    border-color: #3b82f6;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-primary, #1e293b);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #3b82f6;
+    border-radius: 4px;
+}
+
+/* ==================== DARK THEME ==================== */
+[data-theme="dark"] .form-actions {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .checkbox-container {
+    background: var(--bg-secondary, #0f172a);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .checkbox-label {
+    color: var(--text-primary, #f1f5f9);
+}
+
+/* Select en dark mode - asegurar texto visible */
+[data-theme="dark"] .asignacion-form .form-select,
+[data-theme="dark"] .asignacion-form select {
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+    -webkit-text-fill-color: #f1f5f9 !important;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .asignacion-form .form-select option,
+[data-theme="dark"] .asignacion-form select option {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 576px) {
+    .form-row.two-cols {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}

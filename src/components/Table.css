@@ -1,0 +1,332 @@
+/* ==================== TABLE CONTAINER ==================== */
+.table-responsive {
+    background: var(--bg-primary, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 
+                0 1px 3px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.table-responsive .table {
+    margin-bottom: 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* ==================== TABLE HEADER ==================== */
+.table-responsive .table thead {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+}
+
+.table-responsive .table thead tr {
+    background: transparent !important;
+}
+
+.table-responsive .table thead th {
+    color: white !important;
+    font-weight: 600;
+    padding: 1.1rem 1.25rem;
+    border: none !important;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: transparent !important;
+    position: relative;
+    white-space: nowrap;
+}
+
+.table-responsive .table thead th:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==================== TABLE BODY ==================== */
+.table-responsive .table tbody tr {
+    transition: all 0.2s ease;
+    background: var(--bg-primary, #ffffff);
+}
+
+.table-responsive .table tbody tr:nth-child(even) {
+    background: var(--bg-tertiary, #f8fafc);
+}
+
+.table-responsive .table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.06);
+    transform: scale(1.002);
+}
+
+.table-responsive .table tbody td {
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color, #e9ecef);
+    color: #000000 !important;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+}
+
+/* Asegurar texto negro en modo claro */
+.table-responsive .table tbody td,
+.table-responsive .table tbody td a,
+.table-responsive .table tbody td span:not([class*="badge"]) {
+    color: #000000 !important;
+}
+
+.table-responsive .table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==================== ACTION BUTTONS ==================== */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-buttons button,
+.action-buttons .btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.action-buttons button:hover,
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-buttons .btn-info {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    color: white;
+}
+
+.action-buttons .btn-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+    color: white;
+}
+
+.action-buttons .btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+    color: white;
+}
+
+/* ==================== ROLE BADGES ==================== */
+.badge-role {
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge-admin {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: #000000 !important;
+}
+
+.badge-coordinador {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    color: #000000 !important;
+}
+
+.badge-profesor {
+    background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
+    color: #000000 !important;
+}
+
+.badge-padre {
+    background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+    color: #000000 !important;
+}
+
+.badge-alumno {
+    background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+    color: #000000 !important;
+}
+
+/* ==================== STATUS BADGES ==================== */
+.badge-active {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    color: #000000 !important;
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.badge-inactive {
+    background: linear-gradient(135deg, #fca5a5 0%, #f87171 100%);
+    color: #000000 !important;
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+/* Toggle status badge */
+.badge-status-toggle {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.badge-status-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.08);
+}
+
+/* Badges para becado */
+.badge-becado {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.badge-no-becado {
+    background: #64748b;
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+/* ==================== EMPTY STATE ==================== */
+.table-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.table-empty svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* ==================== DARK THEME ==================== */
+[data-theme="dark"] .table-responsive {
+    background: #0f172a !important;
+    border-color: #334155;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .table-responsive .table thead {
+    background: linear-gradient(135deg, #1e3a5f 0%, #334155 100%);
+}
+
+[data-theme="dark"] .table-responsive .table tbody {
+    background: #1e293b !important;
+}
+
+[data-theme="dark"] .table-responsive .table tbody tr {
+    background: #1e293b !important;
+}
+
+[data-theme="dark"] .table-responsive .table tbody tr:nth-child(even) {
+    background: #0f172a !important;
+}
+
+[data-theme="dark"] .table-responsive .table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.2) !important;
+}
+
+[data-theme="dark"] .table-responsive .table tbody td {
+    border-bottom-color: #334155;
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+/* Texto visible en dark mode - color blanco */
+[data-theme="dark"] .table-responsive .table tbody td,
+[data-theme="dark"] .table-responsive .table tbody td *,
+[data-theme="dark"] .table-responsive .table tbody td a,
+[data-theme="dark"] .table-responsive .table tbody td span:not([class*="badge"]) {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .action-buttons button,
+[data-theme="dark"] .action-buttons .btn {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .badge-role,
+[data-theme="dark"] .badge-active,
+[data-theme="dark"] .badge-inactive {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Badges de estado en dark mode con letras negras */
+[data-theme="dark"] .badge-active {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #000000 !important;
+}
+
+[data-theme="dark"] .badge-inactive {
+    background: linear-gradient(135deg, #fca5a5 0%, #f87171 100%);
+    color: #000000 !important;
+}
+
+/* Roles en dark mode con letras negras */
+[data-theme="dark"] .badge-admin,
+[data-theme="dark"] .badge-coordinador,
+[data-theme="dark"] .badge-profesor,
+[data-theme="dark"] .badge-padre,
+[data-theme="dark"] .badge-alumno {
+    color: #000000 !important;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table-responsive .table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 576px) {
+    .table-responsive .table thead th,
+    .table-responsive .table tbody td {
+        padding: 0.85rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .action-buttons button,
+    .action-buttons .btn {
+        width: 32px;
+        height: 32px;
+    }
+}

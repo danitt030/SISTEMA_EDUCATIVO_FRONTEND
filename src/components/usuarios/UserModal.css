@@ -1,0 +1,74 @@
+/* ==================== USER FORM ==================== */
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* ==================== FORM ROW ==================== */
+.form-row {
+    margin-bottom: 0.5rem;
+}
+
+.form-row.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+/* ==================== FORM SECTION ==================== */
+.form-section {
+    margin-bottom: 1.5rem;
+}
+
+.form-section-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary, #64748b);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color, #e2e8f0);
+}
+
+/* ==================== FORM ACTIONS ==================== */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color, #e2e8f0);
+}
+
+.form-actions .btn {
+    min-width: 140px;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ==================== DARK THEME ==================== */
+[data-theme="dark"] .form-actions {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .form-section-title {
+    color: #94a3b8;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 576px) {
+    .form-row.two-cols {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
